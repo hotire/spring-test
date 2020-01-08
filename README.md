@@ -27,3 +27,20 @@ The ClassMode options for a test class define when the context is reset
 The MethodMode options for an individual method define when the context is reset
   - BEFORE_METHOD : Before the current test method
   - AFTER_METHOD : After the current test method
+
+## JUnit5
+
+### ParameterizedTest
+
+인자 값을 다르게 전달하여 테스트하는 방법이다. 
+
+- @ValueSource :  지정한 배열을 파라미터 값으로 순서대로 넘겨준다.
+
+- @EnumSource : (열겨형) 값의 배열을 테스트 메서드에 전달한다.
+  - names 속성 : 기본적으로 names 속성은 일치하는 enum 값을 가진다.
+
+- @MethodSource : 복잡한 인수를 전달할 떄 사용하는 방법이다. 
+  - Stream<Arguments> 와 같은 형태로 반환해야하며, static 단위이다. 
+  
+            
+ 
