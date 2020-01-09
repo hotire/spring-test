@@ -63,6 +63,13 @@ class JUnit5ParameterizedTest {
     assertThat(Strings.isBlank(input)).isEqualTo(expected);
   }
 
+  @ParameterizedTest
+  @VariableSource("arguments")
+  void isBlank_ShouldReturnTrueForNullOrBlankStringsVariableSource(
+    String input, boolean expected) {
+    assertThat(Strings.isBlank(input)).isEqualTo(expected);
+  }
+
 
   private static Stream<Arguments> provideStringsForIsBlank() {
     return Stream.of(
@@ -73,4 +80,10 @@ class JUnit5ParameterizedTest {
     );
   }
 
+  static Stream<Arguments> arguments = Stream.of(
+    Arguments.of(null, true), // null strings should be considered blank
+    Arguments.of("", true),
+    Arguments.of("  ", true),
+    Arguments.of("not blank", false)
+  );
 }
