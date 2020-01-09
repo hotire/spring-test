@@ -1,8 +1,13 @@
-package com.github.hotire.springtest.junit5;
+package com.github.hotire.springtest.junit5.parameterized_test;
 
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 import java.time.Month;
 import java.util.EnumSet;
 import java.util.stream.Stream;
@@ -58,6 +63,7 @@ class JUnit5ParameterizedTest {
     assertThat(Strings.isBlank(input)).isEqualTo(expected);
   }
 
+
   private static Stream<Arguments> provideStringsForIsBlank() {
     return Stream.of(
       Arguments.of(null, true),
@@ -65,19 +71,6 @@ class JUnit5ParameterizedTest {
       Arguments.of("  ", true),
       Arguments.of("not blank", false)
     );
-  }
-
-  private static class CustomArgumentProvider implements ArgumentsProvider {
-
-    @Override
-    public Stream<? extends Arguments> provideArguments(ExtensionContext extensionContext)
-      throws Exception {
-      return Stream.of(
-        Arguments.of((String) null),
-        Arguments.of(""),
-        Arguments.of("   ")
-      );
-    }
   }
 
 }
