@@ -7,8 +7,11 @@ import java.time.Month;
 import java.util.EnumSet;
 import java.util.stream.Stream;
 import org.apache.logging.log4j.util.Strings;
+import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.ArgumentsProvider;
+import org.junit.jupiter.params.provider.ArgumentsSource;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -49,6 +52,12 @@ class JUnit5ParameterizedTest {
     assertThat(Strings.isBlank(input)).isEqualTo(expected);
   }
 
+  @ParameterizedTest
+  @ArgumentsSource(CustomArgumentProvider.class)
+  void isBlank_ShouldReturnTrueForNullOrBlankStringsArgProvider(String input, boolean expected) {
+    assertThat(Strings.isBlank(input)).isEqualTo(expected);
+  }
+
   private static Stream<Arguments> provideStringsForIsBlank() {
     return Stream.of(
       Arguments.of(null, true),
@@ -57,4 +66,18 @@ class JUnit5ParameterizedTest {
       Arguments.of("not blank", false)
     );
   }
+
+  private static class CustomArgumentProvider implements ArgumentsProvider {
+
+    @Override
+    public Stream<? extends Arguments> provideArguments(ExtensionContext extensionContext)
+      throws Exception {
+      return Stream.of(
+        Arguments.of((String) null),
+        Arguments.of(""),
+        Arguments.of("   ")
+      );
+    }
+  }
+
 }
