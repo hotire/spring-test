@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 class DisabledTest {
 
-  @Disableit cmd
+  @Disabled
   @Test
   void ignore() {
     Assertions.fail();
