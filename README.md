@@ -47,3 +47,8 @@ The MethodMode options for an individual method define when the context is reset
   
               
  
+## Mockito
+
+### ArgumentCaptor
+
+verification에만 사용하는 기능으로, 아규먼트를 저장해놓았다가 나중에 getValue할 수 있다. 
