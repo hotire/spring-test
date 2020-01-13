@@ -37,6 +37,12 @@ The MethodMode options for an individual method define when the context is reset
 
 - @BeforeClass : 테스트 클래스 당 테스트 실행하기 전에 실행된다. (static)
 
+### @After / @AfterClass
+
+- @After : 테스트 마다 실행된 후 실행
+
+- @AfterClass : 테스트 클래스 당 테스트 실행된 후 실행된다. (static)
+
 ## JUnit5
 
 ### ParameterizedTest
@@ -61,6 +67,12 @@ The MethodMode options for an individual method define when the context is reset
 
 - @BeforeEach : JUnit4 @BeforeClass와 동일한 기능으로 테스트 클래스 당 테스트 전에 실행된다. (static 이지만, Test Instance 전략 변경시 non static)
 
+
+### @AfterAll / @AfterEach
+
+- @AfterAll : JUnit4 @After와 동일한 기능으로 테스트 마다 실행된 후 실행
+
+- @AfterEach : JUnit4 @AfterClass와 동일한 기능으로 테스트 클래스 당 테스트 후에 실행된다. (static 이지만, Test Instance 전략 변경시 non static)
 
               
  
