@@ -28,6 +28,15 @@ The MethodMode options for an individual method define when the context is reset
   - BEFORE_METHOD : Before the current test method
   - AFTER_METHOD : After the current test method
 
+
+## JUnit4
+
+### @Before / @BeforeClass
+
+- @Before : 테스트 마다 실행되기전에 실행
+
+- @BeforeClass : 테스트 클래스 당 테스트 실행하기 전에 실행된다. (static)
+
 ## JUnit5
 
 ### ParameterizedTest
@@ -45,6 +54,14 @@ The MethodMode options for an individual method define when the context is reset
 - ArgumentsProvider : 해당 인터페이스를 implements 하면 custom provider 사용할 수 있다. 
   - annotation과 결합하여 사용도 가능하다. 
   
+
+### @BeforeAll / @BeforeEach
+
+- @BeforeAll : JUnit4 @Before와 동일한 기능으로 테스트 마다 실행되기 전 실행
+
+- @BeforeEach : JUnit4 @BeforeClass와 동일한 기능으로 테스트 클래스 당 테스트 전에 실행된다. (static 이지만, Test Instance 전략 변경시 non static)
+
+
               
  
 ## Mockito
