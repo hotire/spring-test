@@ -31,17 +31,17 @@ public class VariableArgumentsProvider implements ArgumentsProvider,
     try {
       return clazz.getDeclaredField(variableName);
     } catch (Exception e) {
-      return null;
+      throw new IllegalStateException("not found field : " + variableName + " in " + clazz.getSimpleName());
     }
   }
 
   @SuppressWarnings("unchecked")
   private Stream<Arguments> getValue(Field field) {
-    Object value = null;
+    field.setAccessible(true);
     try {
-      value = field.get(null);
-    } catch (Exception ignored) {}
-
-    return value == null ? null : (Stream<Arguments>) value;
+      return (Stream<Arguments>) field.get(null);
+    } catch (IllegalAccessException e) {
+      throw new IllegalStateException(e);
+    }
   }
 }
