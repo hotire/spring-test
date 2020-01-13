@@ -74,6 +74,13 @@ The MethodMode options for an individual method define when the context is reset
 
 - @AfterEach : JUnit4 @AfterClass와 동일한 기능으로 테스트 클래스 당 테스트 후에 실행된다. (static 이지만, Test Instance 전략 변경시 non static)
 
+
+### @TestInstance
+              
+기본 전략으로 JUnit4 / JUnit5 에서 각 테스트마다 instance를 생성한다. 
+
+JUnit5에서는 @TestInstance를 통해 lifecycle를 제어할 수 있다. 
+              
               
  
 ## Mockito
