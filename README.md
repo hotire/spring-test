@@ -81,6 +81,9 @@ The MethodMode options for an individual method define when the context is reset
 
 JUnit5에서는 @TestInstance를 통해 lifecycle를 제어할 수 있다. 
               
+- @TestInstance(TestInstance.Lifecycle.PER_CLASS) : 사용시 Test instance를 하나만을 생성하고 재사용한다. 
+
+@BeforeAll / @AfterAll non-static 사용 가능
               
  
 ## Mockito
