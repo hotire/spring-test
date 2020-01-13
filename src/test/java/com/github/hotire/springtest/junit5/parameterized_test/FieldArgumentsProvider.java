@@ -8,8 +8,8 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.ArgumentsProvider;
 import org.junit.jupiter.params.support.AnnotationConsumer;
 
-public class VariableArgumentsProvider implements ArgumentsProvider,
-  AnnotationConsumer<VariableSource> {
+public class FieldArgumentsProvider implements ArgumentsProvider,
+  AnnotationConsumer<FieldSource> {
 
   private String variableName;
 
@@ -23,8 +23,8 @@ public class VariableArgumentsProvider implements ArgumentsProvider,
   }
 
   @Override
-  public void accept(VariableSource variableSource) {
-    variableName = variableSource.value();
+  public void accept(FieldSource fieldSource) {
+    variableName = fieldSource.value();
   }
 
   private Field getField(Class<?> clazz) {

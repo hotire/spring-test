@@ -10,8 +10,8 @@ import org.junit.jupiter.params.provider.ArgumentsSource;
 @Documented
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-@ArgumentsSource(VariableArgumentsProvider.class)
-public @interface VariableSource {
+@ArgumentsSource(FieldArgumentsProvider.class)
+public @interface FieldSource {
 
   /**
    * The name of the static variable
