@@ -61,6 +61,9 @@ The MethodMode options for an individual method define when the context is reset
   - annotation과 결합하여 사용도 가능하다. 
   
 
+- Custom ArgumentsProvider / Annotation : https://blog.naver.com/gngh0101/221770700325
+
+
 ### @BeforeAll / @BeforeEach
 
 - @BeforeAll : JUnit4 @Before와 동일한 기능으로 테스트 마다 실행되기 전 실행
