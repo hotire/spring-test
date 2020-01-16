@@ -43,6 +43,10 @@ The MethodMode options for an individual method define when the context is reset
 
 - @AfterClass : 테스트 클래스 당 테스트 실행된 후 실행된다. (static)
 
+### @Ignore
+
+테스트를 실행하지 않는다.
+
 ## JUnit5
 
 ### ParameterizedTest
@@ -87,10 +91,15 @@ JUnit5에서는 @TestInstance를 통해 lifecycle를 제어할 수 있다.
 - @TestInstance(TestInstance.Lifecycle.PER_CLASS) : 사용시 Test instance를 하나만을 생성하고 재사용한다. 
 
 @BeforeAll / @AfterAll non-static 사용 가능
-              
+
+### @Disabled
+
+테스트를 실행하지 않는다.              
  
 ## Mockito
 
 ### ArgumentCaptor
 
 verification에만 사용하는 기능으로, 아규먼트를 저장해놓았다가 나중에 getValue할 수 있다. 
+
+
