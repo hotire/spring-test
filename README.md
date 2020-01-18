@@ -103,3 +103,6 @@ JUnit5에서는 @TestInstance를 통해 lifecycle를 제어할 수 있다.
 verification에만 사용하는 기능으로, 아규먼트를 저장해놓았다가 나중에 getValue할 수 있다. 
 
 
+### Verify 
+
+원하는 메서드가 특정 조건으로 실행되었는지를 검증한다. 
