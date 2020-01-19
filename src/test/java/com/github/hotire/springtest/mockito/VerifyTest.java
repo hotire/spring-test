@@ -1,6 +1,7 @@
 package com.github.hotire.springtest.mockito;
 
 
+import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.times;
@@ -63,4 +64,11 @@ public class VerifyTest {
     inOrder.verify(mocks).size();
   }
 
+  @Test
+  public void interactionAtLeast() {
+    List mocks = mock(List.class);
+    mocks.size();
+    mocks.size();
+    verify(mocks, atLeast(1)).size();
+  }
 }
