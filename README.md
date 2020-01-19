@@ -106,3 +106,7 @@ verification에만 사용하는 기능으로, 아규먼트를 저장해놓았다
 ### Verify 
 
 원하는 메서드가 특정 조건으로 실행되었는지를 검증한다. 
+
+- verifyNoInteractions : mock 객체 전체의 메소드가 실행되지 않는 것을 검증한다. 
+
+
