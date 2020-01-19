@@ -9,6 +9,8 @@ import static org.mockito.Mockito.verifyZeroInteractions;
 
 import java.util.List;
 import org.junit.Test;
+import org.mockito.InOrder;
+import org.mockito.Mockito;
 
 /**
  * https://www.baeldung.com/mockito-verify
@@ -41,5 +43,17 @@ public class VerifyTest {
     verify(mocks, times(0)).size();
   }
 
+  @Test
+  public void orderOfInteractions() {
+    List mocks = mock(List.class);
+    mocks.size();
+    mocks.clear();
+    mocks.size();
+
+    InOrder inOrder = Mockito.inOrder(mocks);
+    inOrder.verify(mocks).size();
+    inOrder.verify(mocks).clear();
+    inOrder.verify(mocks).size();
+  }
 
 }
