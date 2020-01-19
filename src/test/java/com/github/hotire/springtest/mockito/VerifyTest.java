@@ -2,6 +2,7 @@ package com.github.hotire.springtest.mockito;
 
 
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoInteractions;
@@ -41,6 +42,12 @@ public class VerifyTest {
   public void noInteractionWithSpecificMethod() {
     List mocks = mock(List.class);
     verify(mocks, times(0)).size();
+  }
+
+  @Test
+  public void interactionNever() {
+    List mocks = mock(List.class);
+    verify(mocks, never()).clear();
   }
 
   @Test
