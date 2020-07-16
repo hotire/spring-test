@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith(LoggerExtension.class)
-public class LoggerTest implements LoggerAware {
+class LoggerTest implements LoggerAware {
 
     private Logger logger;
 
