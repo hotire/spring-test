@@ -17,7 +17,4 @@ public abstract class AbstractUserMockExtension {
 
     @Getter
     private User user = mock(User.class);
-
-    @Getter
-    private Long id = 1L;
 }

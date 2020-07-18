@@ -17,9 +17,13 @@ public class UserMockExtension implements TestInstancePostProcessor, BeforeEachC
 
     @Override
     public void beforeEach(ExtensionContext context) throws Exception {
-        if (testInstance instanceof AbstractUserMockExtension) {
-            final AbstractUserMockExtension extension = ((AbstractUserMockExtension) testInstance);
-            when(extension.getUserService().findById(extension.getId())).thenReturn(extension.getUser());
-        }
+        context.getTestMethod().ifPresent(method -> {
+            UserMock userMock =  method.getAnnotation(UserMock.class);
+            if (testInstance instanceof AbstractUserMockExtension) {
+                final AbstractUserMockExtension extension = ((AbstractUserMockExtension) testInstance);
+                when(extension.getUserService().findById(userMock.id())).thenReturn(extension.getUser());
+            }
+        });
+
     }
 }

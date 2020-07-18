@@ -14,6 +14,7 @@ class UserMockExtensionTest extends AbstractUserMockExtension {
     @Autowired
     private UserController userController;
 
+    @UserMock(id = 1L)
     @Test
     void test() {
         // when
