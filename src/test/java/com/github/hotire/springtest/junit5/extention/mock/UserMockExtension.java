@@ -4,42 +4,27 @@ import com.github.hotire.springtest.User;
 import com.github.hotire.springtest.UserService;
 import org.junit.jupiter.api.extension.BeforeEachCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
-import org.junit.jupiter.api.extension.TestInstancePostProcessor;
-
-import java.util.Arrays;
+import org.springframework.context.ApplicationContext;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+import static org.springframework.test.context.junit.jupiter.SpringExtension.getApplicationContext;
 
 
-public class UserMockExtension implements TestInstancePostProcessor, BeforeEachCallback {
-
-    private Object testInstance;
-
-    @Override
-    public void postProcessTestInstance( Object testInstance, ExtensionContext context) throws Exception {
-        this.testInstance = testInstance;
-    }
+public class UserMockExtension implements BeforeEachCallback {
 
     @Override
     public void beforeEach(ExtensionContext context) throws Exception {
+        final ApplicationContext applicationContext = getApplicationContext(context);
         context.getTestMethod().ifPresent(method -> {
-            UserMock userMock =  method.getAnnotation(UserMock.class);
-            Arrays.stream(testInstance.getClass().getDeclaredFields())
-                  .filter(field -> field.getType().equals(UserService.class))
-                  .findAny()
-                  .ifPresent(field -> {
-                      final User user = mock(User.class);
-                      field.setAccessible(true);
-                      try {
-                          final UserService userService = (UserService) field.get(testInstance);
-                          // when
-                          when(userService.findById(userMock.id())).thenReturn(user);
-                          when(user.getId()).thenReturn(userMock.id());
-                      } catch (IllegalAccessException ignore) {
-                          ignore.printStackTrace();
-                      }
-                  });
+            final UserMock userMock =  method.getAnnotation(UserMock.class);
+            final UserService userService = applicationContext.getBean(UserService.class);
+            final User user = mock(User.class);
+
+            // when
+            when(userService.findById(userMock.id())).thenReturn(user);
+            when(user.getId()).thenReturn(userMock.id());
+            when(user.getName()).thenReturn(userMock.name());
         });
     }
 }
