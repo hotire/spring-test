@@ -110,8 +110,13 @@ verification에만 사용하는 기능으로, 아규먼트를 저장해놓았다
 - verifyNoInteractions : mock 객체 전체의 메소드가 실행되지 않는 것을 검증한다. 
 
 
-### Extension
+### Extension Getting Started
 
 JUnit5에 추가된 Extension은 Test class, method을 확장할 수 있다.
 
 https://blog.naver.com/gngh0101/222035710933
+
+
+### Spring Extension 동작 원리 
+
+https://blog.naver.com/gngh0101/222039768109
