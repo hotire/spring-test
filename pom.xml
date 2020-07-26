@@ -58,8 +58,6 @@
           <threadCountSuites>2</threadCountSuites>
           <threadCountClasses>2</threadCountClasses>
           <threadCountMethods>6</threadCountMethods>
-          <parallelTestTimeoutInSeconds>3.5</parallelTestTimeoutInSeconds>
-          <parallelTestTimeoutForcedInSeconds>5</parallelTestTimeoutForcedInSeconds>
           <perCoreThreadCount>true</perCoreThreadCount>
           <includes>
             <include>FunctionTestSuite.class</include>
