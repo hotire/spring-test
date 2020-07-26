@@ -120,3 +120,9 @@ https://blog.naver.com/gngh0101/222035710933
 ### Spring Extension 동작 원리 
 
 https://blog.naver.com/gngh0101/222039768109
+
+
+## 기타 
+
+### Running JUnit Tests Programmatically, from a Java Application
+- https://www.baeldung.com/junit-tests-run-programmatically-from-java
