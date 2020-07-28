@@ -124,5 +124,8 @@ https://blog.naver.com/gngh0101/222039768109
 
 ## 기타 
 
+### Baeldung JUnit
+https://www.baeldung.com/junit
+
 ### Running JUnit Tests Programmatically, from a Java Application
 - https://www.baeldung.com/junit-tests-run-programmatically-from-java
