@@ -6,7 +6,7 @@ import org.junit.runner.JUnitCore;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CoreTest {
+public class SingleTest {
 
     @Test
     public void helloTrue() {
@@ -21,6 +21,6 @@ public class CoreTest {
     public static void main(String ... args) {
         JUnitCore junit = new JUnitCore();
         junit.addListener(new TextListener(System.out));
-        junit.run(CoreTest.class);
+        junit.run(SingleTest.class);
     }
 }
