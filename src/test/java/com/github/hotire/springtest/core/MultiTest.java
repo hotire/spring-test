@@ -5,6 +5,7 @@ import org.junit.internal.TextListener;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 
+import static com.github.hotire.springtest.core.CoreUtils.resultReport;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MultiTest {
@@ -25,13 +26,5 @@ public class MultiTest {
         final Result result = junit.run(SingleTest.class, MultiTest.class);
 
         resultReport(result);
-    }
-
-    public static void resultReport(Result result) {
-        System.out.println("Finished. Result: Failures: " +
-                result.getFailureCount() + ". Ignored: " +
-                result.getIgnoreCount() + ". Tests run: " +
-                result.getRunCount() + ". Time: " +
-                result.getRunTime() + "ms.");
     }
 }
