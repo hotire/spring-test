@@ -117,9 +117,13 @@ JUnit5에 추가된 Extension은 Test class, method을 확장할 수 있다.
 https://blog.naver.com/gngh0101/222035710933
 
 
-### Spring Extension 동작 원리 
+### Spring Extension 동작 원리 -1 (Store / ApplicationContex)
 
 https://blog.naver.com/gngh0101/222039768109
+
+### Spring Extension 동작 원리 -2(TestContextManager)
+
+https://blog.naver.com/gngh0101/222054436000
 
 
 ## 기타 
