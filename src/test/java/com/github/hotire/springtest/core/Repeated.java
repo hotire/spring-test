@@ -8,11 +8,11 @@ import org.junit.runner.JUnitCore;
 
 public class Repeated {
 
-    public static void main(String ... args) {
-        Test test = new JUnit4TestAdapter(SingleTest.class);
-        RepeatedTest repeatedTest = new RepeatedTest(test, 5);
+    public static void main(final String ... args) {
+        final Test test = new JUnit4TestAdapter(SingleTest.class);
+        final RepeatedTest repeatedTest = new RepeatedTest(test, 5);
 
-        JUnitCore junit = new JUnitCore();
+        final JUnitCore junit = new JUnitCore();
         junit.addListener(new TextListener(System.out));
 
         junit.run(repeatedTest);
