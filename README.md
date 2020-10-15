@@ -28,6 +28,12 @@ The MethodMode options for an individual method define when the context is reset
   - BEFORE_METHOD : Before the current test method
   - AFTER_METHOD : After the current test method
 
+### RestClientTest 
+
+Client-Slice-Test 다. 
+
+https://www.baeldung.com/restclienttest-in-spring-boot 
+
 
 ## JUnit4
 
