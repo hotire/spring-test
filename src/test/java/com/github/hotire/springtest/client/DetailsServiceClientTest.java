@@ -24,7 +24,7 @@ class DetailsServiceClientTest {
     void getUserDetails() {
         // when
         server.expect(requestTo("/hotire/details"))
-                   .andRespond(withSuccess("hello", MediaType.APPLICATION_JSON));
+              .andRespond(withSuccess("hello", MediaType.APPLICATION_JSON));
         final String result = client.getUserDetails("hotire");
 
         // then
