@@ -11,7 +11,7 @@ import com.github.hotire.springtest.User;
 
 class MockedStaticTest {
 
-    @DisplayName("development")
+    @DisplayName("development mockito 3.4.0 after")
     @Test
     void mocked() {
         final String expected = "user";
