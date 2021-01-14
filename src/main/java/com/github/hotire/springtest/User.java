@@ -6,4 +6,8 @@ import lombok.Data;
 public class User extends Entity {
   private String name;
   private Integer age;
+
+  public static String method() {
+    return "user";
+  }
 }
