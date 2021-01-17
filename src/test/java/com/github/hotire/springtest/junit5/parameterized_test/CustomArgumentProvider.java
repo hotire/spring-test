@@ -1,9 +1,10 @@
 package com.github.hotire.springtest.junit5.parameterized_test;
 
-import java.util.stream.Stream;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.ArgumentsProvider;
+
+import java.util.stream.Stream;
 
 public class CustomArgumentProvider implements ArgumentsProvider {
 

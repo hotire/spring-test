@@ -1,18 +1,13 @@
 package com.github.hotire.springtest.mockito;
 
 
-import static org.mockito.Mockito.atLeast;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.verifyNoInteractions;
-import static org.mockito.Mockito.verifyZeroInteractions;
-
-import java.util.List;
 import org.junit.Test;
 import org.mockito.InOrder;
 import org.mockito.Mockito;
+
+import java.util.List;
+
+import static org.mockito.Mockito.*;
 
 /**
  * https://www.baeldung.com/mockito-verify

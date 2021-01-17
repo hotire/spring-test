@@ -1,9 +1,9 @@
 package com.github.hotire.springtest.junit5.test_instacne;
 
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class Lifecycle {
   private int sum = 1;

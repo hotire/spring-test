@@ -1,13 +1,12 @@
 package com.github.hotire.springtest.mockito;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.mockStatic;
-
+import com.github.hotire.springtest.User;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;
 
-import com.github.hotire.springtest.User;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.mockStatic;
 
 class MockedStaticTest {
 

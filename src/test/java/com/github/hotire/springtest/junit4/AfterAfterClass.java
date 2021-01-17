@@ -1,11 +1,11 @@
 package com.github.hotire.springtest.junit4;
 
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class AfterAfterClass {
 
