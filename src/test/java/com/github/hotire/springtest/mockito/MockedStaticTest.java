@@ -14,11 +14,11 @@ class MockedStaticTest {
     @DisplayName("development mockito 3.4.0 after")
     @Test
     void mocked() {
-        final String expected = "user";
+        final String expected = "hotire";
         assertThat(User.method()).isNotEqualTo(expected);
         try (MockedStatic mocked = mockStatic(User.class)) {
-            mocked.when(User::method).thenReturn("hotire");
-            assertThat(User.method()).isEqualTo("hotire");
+            mocked.when(User::method).thenReturn(expected);
+            assertThat(User.method()).isEqualTo(expected);
             mocked.verify(User::method);
         }
         assertThat(User.method()).isNotEqualTo(expected);
