@@ -106,6 +106,9 @@ JUnit5에서는 @TestInstance를 통해 lifecycle를 제어할 수 있다.
 
 reference : https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html
 
+### 3.5.0 Static Method, Object construction
+- https://blog.naver.com/gngh0101/222211937470
+
 ### ArgumentCaptor
 
 verification에만 사용하는 기능으로, 아규먼트를 저장해놓았다가 나중에 getValue할 수 있다. 
