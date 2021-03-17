@@ -144,3 +144,8 @@ https://www.baeldung.com/junit
 
 ### Running JUnit Tests Programmatically, from a Java Application
 - https://www.baeldung.com/junit-tests-run-programmatically-from-java
+
+
+### Auto Params
+
+- https://github.com/JavaUnit/AutoParams
