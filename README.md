@@ -121,11 +121,11 @@ verification에만 사용하는 기능으로, 아규먼트를 저장해놓았다
 - verifyNoInteractions : mock 객체 전체의 메소드가 실행되지 않는 것을 검증한다. 
 
 
-### Contribution
+## Contribution
 
 - Fix typo in Javadocs of MockedConstruction 
-https://github.com/mockito/mockito/pull/2180
-
+    - https://github.com/mockito/mockito/pull/2180
+    - 3.7.8 release: https://github.com/mockito/mockito/releases/tag/v3.7.8
 
 ### Extension Getting Started
 
