@@ -155,3 +155,8 @@ https://www.baeldung.com/junit
 ### Auto Params
 
 - https://github.com/JavaUnit/AutoParams
+
+
+### Mutation Testing with PITest
+
+- https://www.baeldung.com/java-mutation-testing-with-pitest
