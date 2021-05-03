@@ -160,3 +160,7 @@ https://www.baeldung.com/junit
 ### Mutation Testing with PITest
 
 - https://www.baeldung.com/java-mutation-testing-with-pitest
+
+### pitest-junit5-plugin
+
+https://github.com/tobiasstadler/pitest-junit5-plugin
