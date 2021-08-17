@@ -164,3 +164,10 @@ https://www.baeldung.com/junit
 ### pitest-junit5-plugin
 
 https://github.com/tobiasstadler/pitest-junit5-plugin
+
+
+### unit-testing-best-practices
+
+- https://docs.microsoft.com/ko-kr/dotnet/core/testing/unit-testing-best-practices
+
+- https://blog.kingbbode.com/52
