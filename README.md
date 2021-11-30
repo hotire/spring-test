@@ -171,3 +171,8 @@ https://github.com/tobiasstadler/pitest-junit5-plugin
 - https://docs.microsoft.com/ko-kr/dotnet/core/testing/unit-testing-best-practices
 
 - https://blog.kingbbode.com/52
+
+
+### 스프링캠프 2019 [Track 2 Session 3] : 무엇을 테스트할 것인가? 어떻게 테스트할 것인가? (권용근)
+
+https://youtu.be/YdtknE_yPk4
