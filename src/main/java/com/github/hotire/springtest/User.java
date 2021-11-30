@@ -4,10 +4,10 @@ import lombok.Data;
 
 @Data
 public class User extends Entity {
-  private String name;
-  private Integer age;
+    private String name;
+    private Integer age;
 
-  public static String method() {
-    return "user";
-  }
+    public static String method() {
+        return "user";
+    }
 }

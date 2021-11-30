@@ -8,13 +8,13 @@ import java.util.stream.Stream;
 
 public class CustomArgumentProvider implements ArgumentsProvider {
 
-  @Override
-  public Stream<? extends Arguments> provideArguments(ExtensionContext extensionContext)
-    throws Exception {
-    return Stream.of(
-      Arguments.of((String) null),
-      Arguments.of(""),
-      Arguments.of("   ")
-    );
-  }
+    @Override
+    public Stream<? extends Arguments> provideArguments(ExtensionContext extensionContext)
+            throws Exception {
+        return Stream.of(
+                Arguments.of((String) null),
+                Arguments.of(""),
+                Arguments.of("   ")
+        );
+    }
 }

@@ -1,6 +1,7 @@
 package com.github.hotire.springtest.mockito;
 
 import com.github.hotire.springtest.User;
+
 import org.junit.jupiter.api.Test;
 import org.mockito.MockedConstruction;
 

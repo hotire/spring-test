@@ -18,7 +18,7 @@ class TestFactoryTest {
         ).map(param -> DynamicTest.dynamicTest("isEmpty, param : " + param, () -> {
             // given
             final String s = param.getFirst();
-            final boolean expected  = param.getSecond();
+            final boolean expected = param.getSecond();
 
             // when
             final boolean result = s.isEmpty();

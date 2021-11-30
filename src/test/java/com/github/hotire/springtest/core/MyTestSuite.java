@@ -8,14 +8,13 @@ import org.junit.runners.Suite;
 
 import static com.github.hotire.springtest.core.CoreUtils.resultReport;
 
-
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-        SingleTest.class,
-        MultiTest.class
-})
+                            SingleTest.class,
+                            MultiTest.class
+                    })
 public class MyTestSuite {
-    public static void main(String ... args) {
+    public static void main(String... args) {
         final JUnitCore junit = new JUnitCore();
         junit.addListener(new TextListener(System.out));
         final Result result = junit.run(MyTestSuite.class);

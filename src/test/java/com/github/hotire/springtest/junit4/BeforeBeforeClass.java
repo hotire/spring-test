@@ -1,6 +1,5 @@
 package com.github.hotire.springtest.junit4;
 
-
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -9,24 +8,24 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class BeforeBeforeClass {
 
-  private static String value;
+    private static String value;
 
-  @BeforeClass
-  public static void init() {
-    assertThat(value).isNull();
-    value = "init";
-  }
+    @BeforeClass
+    public static void init() {
+        assertThat(value).isNull();
+        value = "init";
+    }
 
-  @Before
-  public void config() {
-    assertThat(value).isNotNull();
-    assertThat(value).isEqualTo("init");
-    value = "config";
-  }
+    @Before
+    public void config() {
+        assertThat(value).isNotNull();
+        assertThat(value).isEqualTo("init");
+        value = "config";
+    }
 
-  @Test
-  public void test() {
-    assertThat(value).isNotNull();
-    assertThat(value).isEqualTo("config");
-  }
+    @Test
+    public void test() {
+        assertThat(value).isNotNull();
+        assertThat(value).isEqualTo("config");
+    }
 }

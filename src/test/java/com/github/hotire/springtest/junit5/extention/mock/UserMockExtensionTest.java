@@ -1,9 +1,9 @@
 package com.github.hotire.springtest.junit5.extention.mock;
 
-
 import com.github.hotire.springtest.User;
 import com.github.hotire.springtest.UserController;
 import com.github.hotire.springtest.UserService;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

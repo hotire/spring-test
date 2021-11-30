@@ -20,7 +20,7 @@ public class MultiTest {
         assertThat(false).isFalse();
     }
 
-    public static void main(String ... args) {
+    public static void main(String... args) {
         final JUnitCore junit = new JUnitCore();
         junit.addListener(new TextListener(System.out));
         final Result result = junit.run(SingleTest.class, MultiTest.class);

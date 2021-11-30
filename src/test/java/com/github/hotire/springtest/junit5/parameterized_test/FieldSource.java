@@ -10,8 +10,8 @@ import java.lang.annotation.*;
 @ArgumentsSource(FieldArgumentsProvider.class)
 public @interface FieldSource {
 
-  /**
-   * The name of the static variable
-   */
-  String value();
+    /**
+     * The name of the static variable
+     */
+    String value();
 }

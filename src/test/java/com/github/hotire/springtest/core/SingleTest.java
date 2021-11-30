@@ -10,7 +10,7 @@ public class SingleTest {
 
     @Test
     public void helloTrue() {
-       assertThat(true).isTrue();
+        assertThat(true).isTrue();
     }
 
     @Test
@@ -18,7 +18,7 @@ public class SingleTest {
         assertThat(false).isFalse();
     }
 
-    public static void main(String ... args) {
+    public static void main(String... args) {
         final JUnitCore junit = new JUnitCore();
         junit.addListener(new TextListener(System.out));
         junit.run(SingleTest.class);

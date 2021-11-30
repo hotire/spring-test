@@ -30,14 +30,12 @@ class UserControllerTest {
     @MockBean
     private UserService userService;
 
-
     @Test
     void findById() throws Exception {
         // when
         when(userService.findById(1L)).thenReturn(new User());
         mockMvc.perform(MockMvcRequestBuilders.get("/user/1"))
                .andDo(print());
-
 
     }
 

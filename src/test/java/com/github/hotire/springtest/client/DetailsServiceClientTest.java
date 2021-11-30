@@ -1,6 +1,7 @@
 package com.github.hotire.springtest.client;
 
 import lombok.RequiredArgsConstructor;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.client.RestClientTest;
 import org.springframework.http.MediaType;

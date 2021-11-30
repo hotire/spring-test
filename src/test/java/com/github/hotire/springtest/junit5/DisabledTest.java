@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 
 class DisabledTest {
 
-  @Disabled
-  @Test
-  void ignore() {
-    Assertions.fail();
-  }
+    @Disabled
+    @Test
+    void ignore() {
+        Assertions.fail();
+    }
 }
