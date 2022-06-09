@@ -23,11 +23,19 @@ public class SpringBootTestContextBootstrapperCore {
     /**
      * @see org.springframework.boot.test.context.SpringBootTestContextBootstrapper#getAndProcessPropertySourceProperties(MergedContextConfiguration)
      */
-    private List<String> getAndProcessPropertySourceProperties(MergedContextConfiguration mergedConfig) { getDifferentiatorPropertySourceProperty();
-       return new ArrayList<>();
+    private List<String> getAndProcessPropertySourceProperties(MergedContextConfiguration mergedConfig) {
+        getDifferentiatorPropertySourceProperty();
+        return new ArrayList<>();
     }
 
     protected String getDifferentiatorPropertySourceProperty() {
         return getClass().getName() + "=true";
+    }
+
+    /**
+     * @see AbstractTestContextBootstrapper#buildMergedContextConfiguration()
+     */
+    public final MergedContextConfiguration buildMergedContextConfiguration() {
+        return null;
     }
 }
