@@ -12,14 +12,14 @@ class ArchUnitTest {
 
     @Test
     void checkLayer() {
-        LayeredArchitecture rule = layeredArchitecture()
+        final LayeredArchitecture rule = layeredArchitecture()
             .consideringOnlyDependenciesInLayers()
             .layer("Controller").definedBy("..controller..")
             .layer("Service").definedBy("..service..")
             .layer("Repository").definedBy("..repository..")
-            .whereLayer("Controller ").mayNotBeAccessedByAnyLayer()
+            .whereLayer("Controller").mayNotBeAccessedByAnyLayer()
             .whereLayer("Service").mayOnlyBeAccessedByLayers("Controller")
             .whereLayer("Repository").mayOnlyBeAccessedByLayers("Service");
-
+        rule.check(importedClasses);
     }
 }
