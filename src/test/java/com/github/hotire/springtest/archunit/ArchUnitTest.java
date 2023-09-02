@@ -8,15 +8,15 @@ import com.tngtech.archunit.library.Architectures.LayeredArchitecture;
 import org.junit.jupiter.api.Test;
 
 class ArchUnitTest {
-    final JavaClasses importedClasses = new ClassFileImporter().importPackages("com.github.hotire.springtest");
+    final JavaClasses importedClasses = new ClassFileImporter().importPackages("com.github.hotire.springtest.arch_unit");
 
     @Test
     void checkLayer() {
         final LayeredArchitecture rule = layeredArchitecture()
             .consideringOnlyDependenciesInLayers()
-            .layer("Controller").definedBy("..controller..")
-            .layer("Service").definedBy("..service..")
-            .layer("Repository").definedBy("..repository..")
+            .layer("Controller").definedBy("..layered.controller..")
+            .layer("Service").definedBy("..layered.service..")
+            .layer("Repository").definedBy("..layered.repository..")
             .whereLayer("Controller").mayNotBeAccessedByAnyLayer()
             .whereLayer("Service").mayOnlyBeAccessedByLayers("Controller")
             .whereLayer("Repository").mayOnlyBeAccessedByLayers("Service");
