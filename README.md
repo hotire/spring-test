@@ -187,3 +187,10 @@ https://youtu.be/YdtknE_yPk4
 ## Test Double
 
 https://blog.cleancoder.com/uncle-bob/2014/05/14/TheLittleMocker.html
+
+
+### Mock
+
+when we are speaking informally the word mock is a synonym for Test Double.
+
+long ago some very smart people wrote a paper that introduced and defined the term Mock Object. Lots of other people read it and started using that term. Other people, who hadn’t read the paper, heard the term and started using it with a broader meaning. They even turned the word into a *verb*. They’d say, “Let’s mock that object out.”, or “We’ve got a lot of mocking to do.”
