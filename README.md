@@ -186,7 +186,10 @@ https://youtu.be/YdtknE_yPk4
 
 ## Test Double
 
-https://blog.cleancoder.com/uncle-bob/2014/05/14/TheLittleMocker.html
+- https://blog.cleancoder.com/uncle-bob/2014/05/14/TheLittleMocker.html
+
+- https://martinfowler.com/bliki/TestDouble.html
+
 
 
 ### Mock
