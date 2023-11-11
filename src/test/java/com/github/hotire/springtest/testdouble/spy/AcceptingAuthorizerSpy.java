@@ -1,6 +1,6 @@
-package com.github.hotire.springtest.testdoubles.spy;
+package com.github.hotire.springtest.testdouble.spy;
 
-import com.github.hotire.springtest.testdoubles.Authorizer;
+import com.github.hotire.springtest.testdouble.Authorizer;
 
 public class AcceptingAuthorizerSpy implements Authorizer {
 

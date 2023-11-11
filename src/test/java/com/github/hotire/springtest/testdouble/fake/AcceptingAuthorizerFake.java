@@ -1,6 +1,6 @@
-package com.github.hotire.springtest.testdoubles.fake;
+package com.github.hotire.springtest.testdouble.fake;
 
-import com.github.hotire.springtest.testdoubles.Authorizer;
+import com.github.hotire.springtest.testdouble.Authorizer;
 import java.util.HashMap;
 import java.util.Map;
 

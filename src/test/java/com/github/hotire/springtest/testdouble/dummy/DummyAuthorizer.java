@@ -1,6 +1,6 @@
-package com.github.hotire.springtest.testdoubles.dummy;
+package com.github.hotire.springtest.testdouble.dummy;
 
-import com.github.hotire.springtest.testdoubles.Authorizer;
+import com.github.hotire.springtest.testdouble.Authorizer;
 
 public class DummyAuthorizer implements Authorizer {
 

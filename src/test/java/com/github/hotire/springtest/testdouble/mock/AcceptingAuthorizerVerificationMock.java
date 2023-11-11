@@ -1,6 +1,6 @@
-package com.github.hotire.springtest.testdoubles.mock;
+package com.github.hotire.springtest.testdouble.mock;
 
-import com.github.hotire.springtest.testdoubles.Authorizer;
+import com.github.hotire.springtest.testdouble.Authorizer;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
