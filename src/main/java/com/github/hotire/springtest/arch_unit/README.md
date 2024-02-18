@@ -10,6 +10,8 @@
 
 ### Configuring the Resolution Behavior
 
+- archunit.properties
+
 resolveMissingDependenciesFromClassPath=false
 
 
